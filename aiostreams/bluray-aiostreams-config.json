@@ -1,0 +1,400 @@
+{
+  "uuid": "3efe0455-bcb6-47a0-94fe-ae06a5e01492",
+  "trusted": false,
+  "addonName": "4k bluray remux",
+  "excludedResolutions": [
+    "Unknown",
+    "144p",
+    "240p",
+    "360p",
+    "480p",
+    "720p",
+    "576p"
+  ],
+  "includedResolutions": [],
+  "requiredResolutions": [],
+  "preferredResolutions": [
+    "2160p",
+    "1440p",
+    "1080p",
+    "720p",
+    "576p",
+    "480p",
+    "360p",
+    "240p",
+    "144p",
+    "Unknown"
+  ],
+  "excludedQualities": [
+    "CAM",
+    "SCR",
+    "TS",
+    "TC",
+    "Unknown"
+  ],
+  "includedQualities": [],
+  "requiredQualities": [],
+  "preferredQualities": [
+    "BluRay REMUX",
+    "BluRay",
+    "WEB-DL",
+    "WEBRip",
+    "HDRip",
+    "HC HD-Rip",
+    "DVDRip",
+    "HDTV",
+    "CAM",
+    "TS",
+    "TC",
+    "SCR",
+    "Unknown"
+  ],
+  "excludedLanguages": [],
+  "includedLanguages": [],
+  "requiredLanguages": [],
+  "preferredLanguages": [
+    "English"
+  ],
+  "excludedVisualTags": [
+    "3D",
+    "AI",
+    "H-OU",
+    "H-SBS"
+  ],
+  "includedVisualTags": [],
+  "requiredVisualTags": [],
+  "preferredVisualTags": [
+    "HDR+DV",
+    "HDR10+",
+    "HDR10",
+    "DV",
+    "HDR",
+    "10bit"
+  ],
+  "excludedAudioTags": [],
+  "includedAudioTags": [],
+  "requiredAudioTags": [],
+  "preferredAudioTags": [],
+  "excludedAudioChannels": [],
+  "includedAudioChannels": [],
+  "requiredAudioChannels": [],
+  "preferredAudioChannels": [],
+  "excludedStreamTypes": [],
+  "includedStreamTypes": [],
+  "requiredStreamTypes": [],
+  "preferredStreamTypes": [],
+  "excludedEncodes": [],
+  "includedEncodes": [],
+  "requiredEncodes": [],
+  "preferredEncodes": [],
+  "seederRangeTypes": [],
+  "ageRangeTypes": [
+    "usenet"
+  ],
+  "digitalReleaseFilter": {
+    "enabled": false,
+    "tolerance": 1,
+    "requestTypes": [
+      "movie",
+      "series",
+      "anime"
+    ],
+    "addons": []
+  },
+  "excludeCachedFromAddons": [],
+  "excludeCachedFromServices": [],
+  "excludeCachedFromStreamTypes": [],
+  "excludeUncached": false,
+  "excludeUncachedFromAddons": [],
+  "excludeUncachedFromServices": [],
+  "excludeUncachedFromStreamTypes": [],
+  "dynamicAddonFetching": {
+    "enabled": false,
+    "condition": "(count(quality(resolution(cached(totalStreams), \"2160p\"), \"Bluray REMUX\")) >= 4) or totalTimeTaken > 6000"
+  },
+  "groups": {
+    "enabled": false
+  },
+  "sortCriteria": {
+    "global": [
+      {
+        "key": "cached",
+        "direction": "desc"
+      },
+      {
+        "key": "library",
+        "direction": "desc"
+      },
+      {
+        "key": "resolution",
+        "direction": "desc"
+      },
+      {
+        "key": "quality",
+        "direction": "desc"
+      },
+      {
+        "key": "regexPatterns",
+        "direction": "desc"
+      },
+      {
+        "key": "visualTag",
+        "direction": "desc"
+      },
+      {
+        "key": "language",
+        "direction": "desc"
+      },
+      {
+        "key": "size",
+        "direction": "desc"
+      },
+      {
+        "key": "seeders",
+        "direction": "desc"
+      }
+    ],
+    "cached": [],
+    "uncached": [],
+    "movies": [],
+    "cachedMovies": [],
+    "uncachedMovies": [],
+    "series": [],
+    "cachedSeries": [],
+    "uncachedSeries": [],
+    "anime": [],
+    "cachedAnime": [],
+    "uncachedAnime": []
+  },
+  "formatter": {
+    "id": "custom",
+    "definition": {
+      "name": "{stream.resolution::=2160p[\"2160p\"||\"\"]}{stream.resolution::=1080p[\"1080p\"||\"\"]}{stream.resolution::=1440p[\"1440p\"||\"\"]}{stream.resolution::=720p[\"720p\"||\"\"]}{stream.resolution::=576p[\"576p\"||\"\"]}{stream.resolution::=420p[\"420p\"||\"\"]}\n{stream.quality::exists[\" | {stream.quality} \"||\"\"]}{stream.visualTags::exists[\"| {stream.visualTags::join(' | ')}\"||\"\"]}\n",
+      "description": "{stream.title::exists[\"🎬 {stream.title}\"||\"\"]}{stream.year::exists[\" ({stream.year})\"||\"\"]}{stream.season::>=0[\" S\"||\"\"]}{stream.season::<=9[\"0\"||\"\"]}{stream.season::>0[\"{stream.season}\"||\"\"]}{stream.episode::>=0[\" • E\"||\"\"]}{stream.episode::<=9[\"0\"||\"\"]}{stream.episode::>0[\"{stream.episode}\"||\"\"]}\n{service.cached::istrue[\"\"||\"\"]}🔍 From {addon.name}  {service.cached::isfalse[\"🔴\"||\"\"]}\n{stream.size::>0[\"💾 {stream.size::bytes}\"||\"\"]}\n📶{stream.bitrate::bitrate}"
+    }
+  },
+  "proxy": {
+    "id": "mediaflow",
+    "proxiedAddons": [],
+    "proxiedServices": []
+  },
+  "resultLimits": {
+    "resolution": 4
+  },
+  "size": {
+    "global": {
+      "movies": [
+        0,
+        100000000000
+      ]
+    }
+  },
+  "hideErrorsForResources": [],
+  "statistics": {
+    "statsToShow": [
+      "addon",
+      "filter"
+    ]
+  },
+  "tmdbAccessToken": "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhOTQ1NTUyMGM4ZDdkMmI0MTU0NDM4MDVkMTZhOTUxZCIsIm5iZiI6MTc1NTk3NDI5Ni4xNSwic3ViIjoiNjhhYTBhOTg1OTQ3NGE2MTI3MWU0YTg0Iiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.BcsHP3K4ugchBL36ePZDqn45uvuP1SqtRJ2kIyG0NU8",
+  "tmdbApiKey": "a9455520c8d7d2b415443805d16a951d",
+  "yearMatching": {
+    "requestTypes": [],
+    "addons": []
+  },
+  "titleMatching": {
+    "requestTypes": [],
+    "addons": [],
+    "enabled": true,
+    "similarityThreshold": 1
+  },
+  "seasonEpisodeMatching": {
+    "requestTypes": [],
+    "addons": []
+  },
+  "deduplicator": {
+    "enabled": true,
+    "excludeAddons": [],
+    "multiGroupBehaviour": "aggressive",
+    "keys": [
+      "filename",
+      "infoHash"
+    ],
+    "cached": "single_result",
+    "uncached": "single_result",
+    "p2p": "single_result"
+  },
+  "autoPlay": {
+    "attributes": [
+      "service",
+      "proxied",
+      "resolution",
+      "quality",
+      "encode",
+      "audioTags",
+      "visualTags",
+      "languages",
+      "releaseGroup"
+    ]
+  },
+  "services": [
+    {
+      "id": "realdebrid",
+      "enabled": true,
+      "credentials": {
+        "apiKey": "UENS2KRXCIFWWXOBDDLWJ37UECQCODS2CRDAYAZKANCSTX5SUC2Q"
+      }
+    },
+    {
+      "id": "alldebrid",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "premiumize",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "debridlink",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "torbox",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "offcloud",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "putio",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "easynews",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "easydebrid",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "debrider",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "pikpak",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "seedr",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "stremio_nntp",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "nzbdav",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "altmount",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "stremthru_newz",
+      "enabled": false,
+      "credentials": {}
+    }
+  ],
+  "presets": [
+    {
+      "type": "aiostreams",
+      "instanceId": "15c",
+      "enabled": false,
+      "options": {
+        "name": "",
+        "manifestUrl": "https://aiostreamsfortheweak.nhyira.dev/stremio/8d966dae-43dd-432b-aa27-4584605aa279/eyJpdiI6InpDeEJDUmRESldUR1JGNnVCTGtBaFE9PSIsImVuY3J5cHRlZCI6Ik1CQkg2M1BYSUw4NU1KbFE2Z1ptMWVvVkpwci9scWpRQWFkM0M0MVFrZ2M9IiwidHlwZSI6ImFpb0VuY3J5cHQifQ/manifest.json",
+        "timeout": 10000,
+        "resources": [],
+        "mediaTypes": [],
+        "libraryAddon": false,
+        "formatPassthrough": false,
+        "resultPassthrough": false,
+        "forceToTop": false
+      }
+    },
+    {
+      "type": "comet",
+      "instanceId": "ff1",
+      "enabled": true,
+      "options": {
+        "name": "Comet",
+        "timeout": 10000,
+        "resources": [
+          "stream"
+        ],
+        "includeP2P": false,
+        "removeTrash": true,
+        "mediaTypes": []
+      }
+    },
+    {
+      "type": "mediafusion",
+      "instanceId": "202",
+      "enabled": true,
+      "options": {
+        "name": "MediaFusion",
+        "timeout": 10000,
+        "resources": [
+          "stream",
+          "catalog",
+          "meta"
+        ],
+        "useCachedResultsOnly": true,
+        "enableWatchlistCatalogs": false,
+        "downloadViaBrowser": false,
+        "contributorStreams": false,
+        "certificationLevelsFilter": [],
+        "nudityFilter": [],
+        "mediaTypes": []
+      }
+    },
+    {
+      "type": "stremthruTorz",
+      "instanceId": "1bb",
+      "enabled": true,
+      "options": {
+        "name": "StremThru Torz",
+        "timeout": 10000,
+        "resources": [
+          "stream"
+        ],
+        "includeP2P": false,
+        "useMultipleInstances": false,
+        "mediaTypes": []
+      }
+    }
+  ],
+  "catalogModifications": [],
+  "cacheAndPlay": {
+    "streamTypes": [
+      "usenet"
+    ]
+  },
+  "checkOwned": true
+}

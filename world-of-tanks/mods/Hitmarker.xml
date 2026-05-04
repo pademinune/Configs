@@ -1,0 +1,25 @@
+<Hitmarker>
+    <!-- Sound Settings -->
+    <playSound>false</playSound> <!-- Enable/disable hitmarker sound -->
+    
+    <!-- Display Settings -->
+    <timeOnScreen>1.0</timeOnScreen> <!-- Duration in seconds that hitmarker stays visible -->
+    <size>80</size> <!-- Hitmarker size in pixels -->
+    <showMarker>true</showMarker> <!-- Enable/disable hitmarker visual display (sound will still play if enabled) -->
+    
+    <!-- Special Damage Markers -->
+    <Markers>
+        <!-- Show special markers for different damage types. If disabled, normal hitmarker will be shown instead -->
+        <Fire>true</Fire> <!-- Orange hitmarker for fire damage -->
+        <Kill>true</Kill> <!-- Red hitmarker for killing shots -->
+    </Markers>
+    
+    <!-- Debug Settings -->
+    <debug>false</debug> <!-- Enable debug mode (writes detailed information to python.log) -->
+    
+    <!-- Animation Settings -->
+    <animationEnabled>true</animationEnabled> <!-- Enable animated hitmarkers instead of static image -->
+    <animationSpeed>17.0</animationSpeed> <!-- Animation speed in frames per second -->
+    <animationLength>12</animationLength> <!-- Total number of animation frames -->
+    <fileName>Hitmarker_Anim</fileName> <!-- Base filename for animation frames (frames should be named: Hitmarker0.dds, Hitmarker1.dds, etc.) -->
+</Hitmarker>

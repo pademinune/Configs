@@ -1,0 +1,79 @@
+// Reduced tank armor
+// pademinune's config
+
+{
+
+	// true - enable the module.
+	"enable" : true,
+	
+	// Move for the interface (game interface moves if the dynamic camera is turned on)
+	"trackUI": false,
+
+	// Indicator position on the screen
+	// Separately for arcade and sniper mode
+	// Inverted adjustment cartesian coordinate system in pixels, with a report from the center of the screen
+	// default y positions are (-100, 200) and (-100, 220)
+	"position" : {
+		"arcade": [-100, 15],
+		"sniper": [-100, 15]
+	},
+	
+	// Field size
+	"size" : [200, 50],
+
+	// Display only on enemy targets
+	"enemysOnly": true,
+
+	// Label text indicator
+	//default is "{{calcedArmor}}/{{calcedPiercingPower}}"
+	"pattern" : "{{calcedArmor}}",
+
+	// Text format
+	"textFormat" : {
+
+		// Alignment label indicator
+		"align" : "center",
+
+		// Transparency label indicator. From 0 - transparent to 100 not transparent
+		"alpha" : 100,
+
+		// Colors set relative to the current chance of penetrate
+		"colors" : {
+
+			"not_pierced": "E90000",
+			"little_pierced": "FFAD00",
+			"great_pierced": "6BF40D"
+		},
+
+		// Font label indicator
+		"font" : "$FieldFont",
+
+		// label font size indicator, 18 is default
+		"size" : 20,
+
+		// Process pattern parameter as HTML text
+		"html": false
+	},
+
+	// Shadow settings label text indicator
+	"shadow" : {
+
+		// Transparency shadow. From 0 - transparent to 100 not transparent
+		"alpha" : 90,
+
+		// Blurry shadows. From 0 - not blurred to ? blurred
+		"blur" : 2,
+
+		// Color тени. Value colors in the RGB (red, green, blue)
+		"color" : "000000",
+
+		// Strength shadows. From 0 - not strength to ? strength
+		"strength" : 2,
+
+		// Indentation distance from the main text
+		"distance" : 0,
+
+		// The angle in which the motion of the shadow
+		"angle" : 0
+	}
+}

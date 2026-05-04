@@ -1,0 +1,23 @@
+{
+    "armor_label": {
+        "label_format": "{armor}", 
+        "font_size": 20, 
+        "y_offset": 30, 
+        "x_offset": 0
+    }, 
+    "colors": {
+        "orange_chance": "FFAD00", 
+        "green_chance": "B6FF00", 
+        "red_chance": "FF2717", 
+        "ricochet": "800080"
+    }, 
+    "pen_label": {
+        "label_format": "{prob}%", 
+        "font_size": 16, 
+        "y_offset": 50, 
+        "x_offset": 0
+    },
+	"track_label": {
+        "enabled": true
+    }
+}
