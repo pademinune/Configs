@@ -1,7 +1,6 @@
 {
-  "uuid": "3efe0455-bcb6-47a0-94fe-ae06a5e01492",
   "trusted": false,
-  "addonName": "4k bluray remux",
+  "addonName": "4K REMUX",
   "excludedResolutions": [
     "Unknown",
     "144p",
@@ -154,23 +153,25 @@
         "direction": "desc"
       }
     ],
+    "movies": [],
+    "series": [],
+    "anime": [],
     "cached": [],
     "uncached": [],
-    "movies": [],
     "cachedMovies": [],
     "uncachedMovies": [],
-    "series": [],
     "cachedSeries": [],
     "uncachedSeries": [],
-    "anime": [],
     "cachedAnime": [],
     "uncachedAnime": []
   },
   "formatter": {
     "id": "custom",
-    "definition": {
-      "name": "{stream.resolution::=2160p[\"2160p\"||\"\"]}{stream.resolution::=1080p[\"1080p\"||\"\"]}{stream.resolution::=1440p[\"1440p\"||\"\"]}{stream.resolution::=720p[\"720p\"||\"\"]}{stream.resolution::=576p[\"576p\"||\"\"]}{stream.resolution::=420p[\"420p\"||\"\"]}\n{stream.quality::exists[\" | {stream.quality} \"||\"\"]}{stream.visualTags::exists[\"| {stream.visualTags::join(' | ')}\"||\"\"]}\n",
-      "description": "{stream.title::exists[\"🎬 {stream.title}\"||\"\"]}{stream.year::exists[\" ({stream.year})\"||\"\"]}{stream.season::>=0[\" S\"||\"\"]}{stream.season::<=9[\"0\"||\"\"]}{stream.season::>0[\"{stream.season}\"||\"\"]}{stream.episode::>=0[\" • E\"||\"\"]}{stream.episode::<=9[\"0\"||\"\"]}{stream.episode::>0[\"{stream.episode}\"||\"\"]}\n{service.cached::istrue[\"\"||\"\"]}🔍 From {addon.name}  {service.cached::isfalse[\"🔴\"||\"\"]}\n{stream.size::>0[\"💾 {stream.size::bytes}\"||\"\"]}\n📶{stream.bitrate::bitrate}"
+    "definitions": {
+      "custom": {
+        "name": "{stream.resolution::=2160p[\"2160p\"||\"\"]}{stream.resolution::=1080p[\"1080p\"||\"\"]}{stream.resolution::=1440p[\"1440p\"||\"\"]}{stream.resolution::=720p[\"720p\"||\"\"]}{stream.resolution::=576p[\"576p\"||\"\"]}{stream.resolution::=420p[\"420p\"||\"\"]}\n{stream.quality::exists[\" | {stream.quality} \"||\"\"]}{stream.visualTags::exists[\"| {stream.visualTags::join(' | ')}\"||\"\"]}\n",
+        "description": "{stream.title::exists[\"🎬 {stream.title}\"||\"\"]}{stream.year::exists[\" ({stream.year})\"||\"\"]}{stream.season::>=0[\" S\"||\"\"]}{stream.season::<=9[\"0\"||\"\"]}{stream.season::>0[\"{stream.season}\"||\"\"]}{stream.episode::>=0[\" • E\"||\"\"]}{stream.episode::<=9[\"0\"||\"\"]}{stream.episode::>0[\"{stream.episode}\"||\"\"]}\n{service.cached::istrue[\"\"||\"\"]}🔍 From {addon.name}  {service.cached::isfalse[\"🔴\"||\"\"]}\n{stream.size::>0[\"💾 {stream.size::bytes}\"||\"\"]}\n{stream.bitrate::>0[\"📶 {stream.bitrate::bitrate}\"||\"\"]}\n#1"
+      }
     }
   },
   "proxy": {
@@ -196,17 +197,15 @@
       "filter"
     ]
   },
-  "tmdbAccessToken": "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhOTQ1NTUyMGM4ZDdkMmI0MTU0NDM4MDVkMTZhOTUxZCIsIm5iZiI6MTc1NTk3NDI5Ni4xNSwic3ViIjoiNjhhYTBhOTg1OTQ3NGE2MTI3MWU0YTg0Iiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.BcsHP3K4ugchBL36ePZDqn45uvuP1SqtRJ2kIyG0NU8",
-  "tmdbApiKey": "a9455520c8d7d2b415443805d16a951d",
   "yearMatching": {
     "requestTypes": [],
     "addons": []
   },
   "titleMatching": {
-    "requestTypes": [],
-    "addons": [],
+    "similarityThreshold": 1,
     "enabled": true,
-    "similarityThreshold": 1
+    "requestTypes": [],
+    "addons": []
   },
   "seasonEpisodeMatching": {
     "requestTypes": [],
@@ -241,9 +240,7 @@
     {
       "id": "realdebrid",
       "enabled": true,
-      "credentials": {
-        "apiKey": "UENS2KRXCIFWWXOBDDLWJ37UECQCODS2CRDAYAZKANCSTX5SUC2Q"
-      }
+      "credentials": {}
     },
     {
       "id": "alldebrid",
@@ -322,22 +319,6 @@
     }
   ],
   "presets": [
-    {
-      "type": "aiostreams",
-      "instanceId": "15c",
-      "enabled": false,
-      "options": {
-        "name": "",
-        "manifestUrl": "https://aiostreamsfortheweak.nhyira.dev/stremio/8d966dae-43dd-432b-aa27-4584605aa279/eyJpdiI6InpDeEJDUmRESldUR1JGNnVCTGtBaFE9PSIsImVuY3J5cHRlZCI6Ik1CQkg2M1BYSUw4NU1KbFE2Z1ptMWVvVkpwci9scWpRQWFkM0M0MVFrZ2M9IiwidHlwZSI6ImFpb0VuY3J5cHQifQ/manifest.json",
-        "timeout": 10000,
-        "resources": [],
-        "mediaTypes": [],
-        "libraryAddon": false,
-        "formatPassthrough": false,
-        "resultPassthrough": false,
-        "forceToTop": false
-      }
-    },
     {
       "type": "comet",
       "instanceId": "ff1",
