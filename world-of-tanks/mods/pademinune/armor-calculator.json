@@ -16,8 +16,5 @@
         "font_size": 16, 
         "y_offset": 50, 
         "x_offset": 0
-    },
-	"track_label": {
-        "enabled": true
     }
 }
