@@ -1,0 +1,22 @@
+{
+  "name": "pademinune-dark-theme",
+  "displayName": "Pademinune Dark Theme",
+  "description": "A dark color theme based on Material Theme Ocean",
+  "version": "0.0.1",
+  "publisher": "your-publisher-id",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Pademinune Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pademinune-dark-theme.json"
+      }
+    ]
+  }
+}
